@@ -1,0 +1,186 @@
+@import url('https://fonts.googleapis.com/css2?family=Aclonica&family=Carter+One&family=El+Messiri:wght@700&family=Fredoka+One&family=Kaushan+Script&family=Lobster&family=Merienda:wght@700&family=Monoton&display=swap');
+/* 
+font-family: 'Aclonica', sans-serif;
+font-family: 'Carter One', cursive;
+font-family: 'El Messiri', sans-serif;
+font-family: 'Fredoka One', cursive;
+font-family: 'Kaushan Script', cursive;
+font-family: 'Lobster', cursive;
+font-family: 'Merienda', cursive;
+font-family: 'Monoton', cursive; */
+
+:root{
+    --maincolor:#d62c57;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    display: flex;
+    background: linear-gradient(to bottom,#f8f7f7,#f8d5de,hsla(345, 85%, 92%, 0.199));
+}
+.main-login{
+    width: 40em;
+    margin: 20px;
+    height: 35em;
+    overflow: hidden;
+    background: url("./l10.jpg") no-repeat center / cover;
+    border-radius: 20px;
+    box-shadow: 5px 20px 50px #000;
+}
+#chk{
+    display: none;
+}
+.signup{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+label{
+    color: #050002;
+    font-size: 2.3em;
+    font-family: 'Aclonica', sans-serif;
+    padding-top: .2em;
+    justify-content: center;
+    display: flex;
+    margin: 60px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: .5s ease-in-out;
+}
+.social{
+    display: flex;
+    font-size: 2.2em;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    margin: .8em auto;
+}
+.social a{
+    margin-left: 1em;
+
+}
+.social a i{
+    transition: .5s All ease;
+    background: #ffffff38;
+    padding: .35rem;
+    color: #000 ;
+}
+.social a i:hover{
+    transition: 0.8s ease;
+     transform: scale(1.3);
+      padding: .5rem;
+    background: #00000038;
+      color: #ffffff;
+}
+.sign-label{
+    margin: 40px;
+}
+input{
+    width: 60%;
+    height: 20px;
+    background:transparent;
+    justify-content: center;
+    display: flex;
+    margin: 20px auto;
+    padding: 10px;
+    font-size: 1.3em;
+    border: none;
+    border-radius: 5px;
+    border: 2px solid rgb(245, 244, 244);
+}
+::placeholder{
+    color: #ffffff;
+    font-size: .8em;
+}
+button{
+font-family: 'Carter One', cursive;
+
+    width: 40%;
+    margin: 10px auto;
+    padding: .2rem 0rem;
+    justify-content: center;
+    display: block;
+    color: #ffffff;
+    background:var(--maincolor);
+    border: none;
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+    font-weight: 500;
+    outline: none;
+    border-radius: 20px;
+    transition: .5s ease-in;
+    cursor: pointer;
+}
+button:hover{
+    background: #1f1e1e;
+    color: #f7f0f2;
+    transition: 0.8s ease;
+    transform: scale(1.1);
+}
+.login{
+    height: 460px;
+    background: #ffffff;
+    border-radius: 60% / 10%;
+    transform: translateY(-180px);
+    transition: .8s ease-in-out;
+}
+.login label{
+    color: var(--maincolor);
+    transform: scale(.6);
+    font-size: 3em;
+   
+}
+.login input{
+    border-radius: 20px;
+    border: 1px solid var(--maincolor);
+}
+.login input::placeholder{
+    color: rgba(0, 0, 0, 0.329);
+}
+.login a{
+    color: var(--maincolor);
+    text-decoration: none;
+    text-align: center;
+}
+#chk:checked ~ .login{
+    transform: translateY(-500px);
+}
+#chk:checked ~ .login label{
+    transform: scale(1);
+}
+#chk:checked ~ .signup label{
+    transform: scale(.6);
+}
+@media (max-width:450px){
+    label{
+        font-size: 2em;
+        padding-top: .2em;
+    }
+    body{
+        background: url("./l10.jpg") no-repeat center / cover;
+    }
+    .main-login{
+        height: 100vh;
+        margin: 0px;
+        border-radius: 0;
+        box-shadow: none;
+    }
+    button{
+        font-family: 2em;
+        width: 70%;
+    }
+    .login{
+        border-radius: 50px ;
+    transform: translateY(-200px);
+}
+    .login label{
+       font-size: 3em !important;
+    }
+    .signup{
+       padding-top: 3em !important;
+   }
+}
